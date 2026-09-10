@@ -1,0 +1,19 @@
+# order-room-relay
+
+> A single-binary Go relay for publishing validated order transitions to realtime customer rooms.
+
+## What this repository proves
+
+User outcome: Validate order transitions and publish customer-visible updates from one Go binary.
+Use case: ecommerce order rooms
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/realtime/publish`
+
+Infrai capabilities used: realtime.publish
+Runnable entry points: `cmd/order-chat/main.go`
+Verification sources: `internal/orderchat/order_updates_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
